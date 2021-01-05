@@ -1,0 +1,7 @@
+{
+	"BaseURL": "localhost:8080",
+	"Keys": {
+		"some_api_key": "api_key_owner",
+		"some_api_key_2": "api_key_owner2"
+	}
+}

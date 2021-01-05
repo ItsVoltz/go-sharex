@@ -1,0 +1,12 @@
+﻿{
+  "Version": "13.4.0",
+  "Name": "go-sharex",
+  "DestinationType": "ImageUploader, TextUploader, FileUploader",
+  "RequestMethod": "POST",
+  "RequestURL": "localhost:8080/v1/upload",
+  "Parameters": {
+    "key": "some_api_key"
+  },
+  "Body": "MultipartFormData",
+  "FileFormName": "upload"
+}
