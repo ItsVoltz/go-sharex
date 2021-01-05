@@ -17,13 +17,9 @@ func Upload(ctx *gin.Context) {
 			log.Printf("%s has uploaded %s\n", config.Get().Keys[ctx.Query("key")], newName)
 			ctx.String(http.StatusOK, config.Get().BaseURL + "/" + newName)
 		} else {
-			ctx.JSON(http.StatusOK, gin.H{
-				"error": er.UploadFailed,
-			})
+			ctx.JSON(http.StatusOK, gin.H{"error": er.UploadFailed})
 		}
 	} else {
-		ctx.JSON(http.StatusOK, gin.H{
-			"error" : er.UploadNoFileProvided,
-		})
+		ctx.JSON(http.StatusOK, gin.H{"error" : er.UploadNoFileProvided})
 	}
 }
