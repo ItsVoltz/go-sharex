@@ -10,6 +10,7 @@ import (
 type Config struct {
 	BaseURL string // Base URL (ex: https://site.com)
 	Keys map[string]string // Map with license : user pair
+	EmbedColor string // discord embed color
 }
 
 var config *Config
@@ -22,7 +23,7 @@ func init() { // Load config.json
 	} else {
 		log.Printf("Failed to read config.json: %s\nCreating config.json", err)
 
-		config = &Config{BaseURL: "localhost:8080", Keys: map[string]string{"some_api_key": "api_key_owner"}}
+		config = &Config{BaseURL: "localhost:8080", Keys: map[string]string{"some_api_key": "api_key_owner"}, EmbedColor: "bf8dec"}
 		config.Save()
 	}
 }
